@@ -1,0 +1,36 @@
+{% extends 'icon.html' %}
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/default.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/search.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home-header.css')}}">
+
+    <title>search</title>
+</head>
+
+<body>
+    <form method="POST" class="form">
+        <input required type="text" class="search-field remove" placeholder="make your search here" name="query">
+        <button type="submit" class="btn remove">Search</button>
+    </form>
+    {% if error|length > 0 %}
+    <p class="error">{{error}}</p>
+    {% endif %}
+    <div class="pic-div flex">
+        {% for picture in pictures%}
+        <img class="image" src="{{picture['image']}}">
+        <p>{{picture_id}}</p>
+        {% endfor %}
+    </div>
+
+
+</body>
+
+</html>
+{% endblock %}

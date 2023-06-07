@@ -1,0 +1,69 @@
+.icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+
+.query-div {
+    margin-top: 20px;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.query {
+    padding: 10px 20px;
+    border-radius: 4px;
+    background: #eee;
+    color: white;
+    text-align: center;
+    color: black;
+    transition: all ease-out 400ms;
+}
+
+.query:hover {
+    background: black;
+    color: white;
+}
+
+
+
+.trending-div {
+    gap: 10px;
+    align-items: center;
+}
+
+.trending {
+    color: rgba(255, 255, 255, 0.76);
+}
+
+.trends {
+    font-size: 20px;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .query-div {
+        gap: 10px;
+        margin-top: 20px;
+        justify-content: left;
+        padding: 5px;
+        flex-wrap: wrap;
+    }
+
+
+    .query-div {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .query {
+        padding: 8px 10px;
+        text-align: center;
+        font-size: small;
+    }
+
+}

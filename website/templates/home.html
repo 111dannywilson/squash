@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home-header.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/default.css')}}">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+
+<body>
+
+    <header class="header flex-center-all">
+        <!-- <h1 class="icon">rttrtrtrtr</h1> -->
+        <h1 class="header-text">Welcome To Squash, If You Don't Find Your Desired Picture ... It Doesn't Exist.
+        </h1>
+        <form method="POST" class="search-div">
+            <input required type="text" class="search-field remove" placeholder="make your search here" name="query">
+            <button type="submit" class="search-btn remove">Search</button>
+        </form>
+
+        <div class="trending-div flex">
+            <h3 class="trending">Trending: </h3>
+            {% for trend in trending %}
+            <p class="trends">{{trend}}</p>
+            {% endfor %}
+        </div>
+    </header>
+
+
+    <div class="query-div flex">
+        {% for word in potential_search %}
+        <a class="query a-tags" href="/search/{{word}}">{{word}}</a>
+        {% endfor %}
+    </div>
+    <div class="pic-div flex">
+        {% for result in results %}
+        <img src="{{result['image']}}" class="">
+        {% endfor %}
+    </div>
+
+    <!-- <div class="pic-div flex">
+        {% for data in pictures %}
+        <img src="{{data['image']}}" class="image">
+        {% endfor%}
+    </div> -->
+
+
+    <div class="page-nav">
+        <a class="a-tags" href="">Prev</a>
+        <a class="a-tags" href="">Next</a>
+    </div>
+
+</body>
+
+<script src=" {{url_for('static', filename='js/main.js' )}}"></script>
+
+</html>

@@ -1,0 +1,55 @@
+.flex-center-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.a-tags {
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.remove {
+    border: none;
+    outline: none;
+}
+
+.a {
+    color: black;
+}
+
+.a:hover {
+    cursor: pointer;
+
+    /* color: white; */
+}
+
+.pic-div {
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .pic-div {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+
+
+    .image {
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
+        border-radius: 2px;
+    }
+
+
+}
