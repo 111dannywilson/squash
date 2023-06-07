@@ -26,14 +26,14 @@ def get_picture(filename): return os.path.join(img, filename)
 # ]
 
 
-pictures = [
-    {"image": get_picture('1.jpg')},
-    {"image": get_picture('2.jpg')},
-    {"image": get_picture('3.jpg')},
-    {"image": get_picture('4.jpg')},
-    {"image": get_picture('5.jpg')},
-    {"image": get_picture('6.jpg')},
-]
+# pictures = [
+#     {"image": get_picture('1.jpg')},
+#     {"image": get_picture('2.jpg')},
+#     {"image": get_picture('3.jpg')},
+#     {"image": get_picture('4.jpg')},
+#     {"image": get_picture('5.jpg')},
+#     {"image": get_picture('6.jpg')},
+# ]
 
 # routes
 # home route(curated pictures)
