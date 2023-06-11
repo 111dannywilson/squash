@@ -26,14 +26,14 @@ def get_picture(filename): return os.path.join(img, filename)
 # ]
 
 
-# pictures = [
-#     {"image": get_picture('1.jpg')},
-#     {"image": get_picture('2.jpg')},
-#     {"image": get_picture('3.jpg')},
-#     {"image": get_picture('4.jpg')},
-#     {"image": get_picture('5.jpg')},
-#     {"image": get_picture('6.jpg')},
-# ]
+pictures = [
+    {"image": get_picture('1.jpg')},
+    {"image": get_picture('2.jpg')},
+    {"image": get_picture('3.jpg')},
+    {"image": get_picture('4.jpg')},
+    {"image": get_picture('5.jpg')},
+    {"image": get_picture('6.jpg')},
+]
 
 # routes
 # home route(curated pictures)
@@ -57,7 +57,7 @@ def home():
     trending = ['travel,', 'mountain,', 'technology,', 'food,', 'business']
     get_started = ['Cats', 'Sky', 'Space', 'Family', 'Ferrari', 'Moon']
 
-    return render_template('home.html', results=results, potential_search=get_started, trending=trending)
+    return render_template('home.html', results=results, potential_search=get_started, trending=trending, pictures=pictures)
 
 
 # search-results route
